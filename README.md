@@ -13,11 +13,11 @@ In these cases, I classified a sentence classified as any of the above as being 
 
 A summary of my dataset:
 
-| Dataset   | Strong language | Not strong language | Total  |
-| --------- | --------------- | ------------------- | ------ |
-| Twitter   | 20620 (83.2%)   | 4163 (16.8%)        | 24783  |
-| Fox News  | 435 (28.5%)     | 1093 (71.5%)        | 1528   |
-| Wikipedia | 16225 (10.2%)   | 143346 (89.8%)      | 159571 |
+| Dataset   | Strong language | Not strong language | 
+| --------- | --------------- | ------------------- | 
+| Twitter   | 20620 (83.2%)   | 4163 (16.8%)        |
+| Fox News  | 435 (28.5%)     | 1093 (71.5%)        |
+| Wikipedia | 16225 (10.2%)   | 143346 (89.8%)      |
 
 ## How to run
 Use pip to install the necessary dependencies:
