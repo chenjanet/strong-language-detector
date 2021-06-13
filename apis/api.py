@@ -5,15 +5,15 @@ import pandas as pd
 
 app = Flask(__name__)
 
-@app.route('/is_profane', methods=['POST'])
-def is_profane():
+@app.route('/is_strong', methods=['POST'])
+def is_strong():
     if model:
         try:
             json_ = request.json
             query = pd.DataFrame(json_)
             vectorized_query = vectorizer.transform(query['text'].values)
-            is_profane = model.predict(vectorized_query)
-            return jsonify({ 'is_profane': is_profane.tolist() })
+            is_strong = model.predict(vectorized_query)
+            return jsonify({ 'is_strong': is_strong.tolist() })
 
         except:
 
