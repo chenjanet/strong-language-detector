@@ -26,6 +26,8 @@ Use pip to install the necessary dependencies:
 
 For a full list of dependencies, see _dependencies.txt_
 
+To run the api, navigate to the apis folder and run `python api.py <port>`, where you can (optionally) specify a port. The api endpoint is `/is_strong`.
+
 ## Citations
 ### Fox News dataset:
 Gao, L., &amp; Huang, R. (2018, May 22). Detecting Online Hate Speech Using Context Aware Models. arXiv.org. https://arxiv.org/pdf/1710.07395.pdf. 
