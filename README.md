@@ -41,3 +41,7 @@ The dataset can be found [here](https://github.com/manoelhortaribeiro/HatefulUse
 
 ### Wikipedia dataset:
 The dataset can be found [here](https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge/data)
+
+## Resources used
+- [Building a Better Profanity Detection Library with scikit-learn](https://towardsdatascience.com/building-a-better-profanity-detection-library-with-scikit-learn-3638b2f2c4c2) by Victor Zhou
+- [Turning Machine Learning Models into APIs in Python](https://www.datacamp.com/community/tutorials/machine-learning-models-api-python) by Sayak Paul
