@@ -3,9 +3,9 @@ import pandas as pd
 df_list = []
 
 # load twitter data
-twitter_df = pd.read_csv('twitter_dataset.csv', usecols=['hate_speech', 'offensive_language', 'tweet'])
-twitter_df.columns = ['hate_speech', 'offensive_language', 'text']
-twitter_df['label'] = twitter_df.apply(lambda row: 1 if row.hate_speech or row.offensive_language else 0, axis = 1)
+twitter_df = pd.read_csv('twitter_dataset.csv', usecols=['class', 'tweet'])
+twitter_df.columns = ['classification', 'text']
+twitter_df['label'] = twitter_df.apply(lambda row: 0 if row.classification==2 else 1, axis = 1)
 df_list.append(twitter_df[['text', 'label']])
 
 # load fox news comment data
