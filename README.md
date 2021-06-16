@@ -3,7 +3,7 @@
 
 ---
 ## Introduction
-The initial idea for this project came from the [Hack the North 2020++ project](https://github.com/j985chen/Purity) I helped to build, which strove to make the internet, in all of its profanity and distraction-filled glory, easier to navigate for young children. 
+The initial idea for this project came from the [Hack the North 2020++ project](https://github.com/j985chen/Purity) I helped build, which strove to make the internet, in all of its profanity and distraction-filled glory, easier to navigate for young children. 
 The original project censored strong and/or profane language by matching it to an array of swear words we compiled; however, given the wide variety of inventive swear words, insults, and slurs found on the internet today, that solution is clearly insufficient beyond a two-day hackathon project.
 
 ## Process
