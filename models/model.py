@@ -1,8 +1,9 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
-from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 import joblib
+import sys
 
 # load dataset in dataframe object
 df = pd.read_csv('../data/clean_data.csv', usecols=['text', 'label'])
@@ -13,13 +14,28 @@ label = df['label'].values
 
 # split dataframe into training + testing sets
 text_train, text_test, label_train, label_test = train_test_split(text, label, test_size=0.25, random_state=1000)
-vectorizer = CountVectorizer()
-vectorizer.fit(text_train)
 
-# store vectorizer in vectorizer.pkl file
+# initialize vectorizer based on command-line arguments (default)
+vectorizer = None
+
+try:
+    arg = int(sys.argv[0])
+    if arg == 'count':
+        vectorizer = CountVectorizer()
+    elif arg == 'tf':
+        vectorizer = TfidfVectorizer(use_idf=False, norm='l2')
+    elif arg == 'tfidf':
+        vectorizer = TfidfVectorizer()
+    else:
+        raise ValueError('Invalid mode')
+except:
+    vectorizer = CountVectorizer()
+
+# fit vectorizer to training data and store in vectorizer.pkl file
+vectorizer.fit(text_train)
 joblib.dump(vectorizer, 'vectorizer.pkl')
 
-# use bag of words model for text
+# transform training + testing set with vectorizer
 X_train = vectorizer.transform(text_train)
 X_test = vectorizer.transform(text_test)
 
