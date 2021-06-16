@@ -27,6 +27,7 @@ Use pip to install the necessary dependencies:
 For a full list of dependencies, see _dependencies.txt_
 
 To create a model, navigate to the models folder and run `python model.py <vectorize method>`, where the vectorize method is one of 'count', 'tf', or 'tf-idf'.
+
 To run the api, navigate to the apis folder and run `python api.py <port>`, where you can (optionally) specify a port. The api endpoint is `/is_strong`.
 
 ## Citations
