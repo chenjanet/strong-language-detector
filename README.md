@@ -22,7 +22,7 @@ A summary of my dataset:
 ## How to run
 Use pip to install the necessary dependencies:
 
-`pip install pandas scikit-learn joblib flask keras tensorflow`
+`pip install pandas scikit-learn joblib flask`
 
 For a full list of dependencies, see _dependencies.txt_
 
