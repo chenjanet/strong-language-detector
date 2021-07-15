@@ -28,7 +28,19 @@ For a full list of dependencies, see _dependencies.txt_
 
 To create a model, navigate to the models folder and run `python model.py <vectorize method>`, where the vectorize method is one of 'count', 'tf', or 'tf-idf'.
 
-To run the api, navigate to the apis folder and run `python api.py <port>`, where you can (optionally) specify a port. The api endpoint is `/is_strong`.
+To run the api, navigate to the apis folder and run `python api.py <port>`, where you can (optionally) specify a port. If no port is specified, the api runs on the port `5000`. POST the texts you want to classify as an array of strings assigned to the "text" key:
+```
+{
+    "text": ["foo", "<insert bad word here>", "bar"]
+}
+```
+The api will return an array of 0s and 1s, with a 0 meaning that the string with that index does not contain strong language, and a 1 meaning that it does:
+```
+{
+    "is_strong": [0, 1, 0]
+}
+```
+The api endpoint is `/is_strong`.
 
 ## Citations
 ### Fox News dataset:

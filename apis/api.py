@@ -17,7 +17,6 @@ def is_strong():
             return jsonify({ 'is_strong': is_strong.tolist() })
 
         except:
-
             return jsonify({ 'trace': traceback.format_exc() })
 
     else:
